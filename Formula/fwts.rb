@@ -1,4 +1,6 @@
 class Fwts < Formula
+  include Language::Python::Virtualenv
+
   desc "Git worktree workflow manager for feature development"
   homepage "https://github.com/laudiacay/featurebox"
   url "https://files.pythonhosted.org/packages/source/f/fwts/fwts-0.1.0.tar.gz"
