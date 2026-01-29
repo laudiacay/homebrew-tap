@@ -10,7 +10,8 @@ class Fwts < Formula
   depends_on "python@3.11"
 
   def install
-    venv = virtualenv_create(libexec, "python3.11")
+    # Create venv with pip
+    system Formula["python@3.11"].opt_bin/"python3.11", "-m", "venv", libexec
     bin.install_symlink libexec/"bin/fwts"
     bin.install_symlink libexec/"bin/fb"
   end
