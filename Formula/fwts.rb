@@ -12,13 +12,14 @@ class Fwts < Formula
   def install
     # Create venv with pip
     system Formula["python@3.11"].opt_bin/"python3.11", "-m", "venv", libexec
-    bin.install_symlink libexec/"bin/fwts"
-    bin.install_symlink libexec/"bin/fb"
   end
 
   def post_install
     # Install from PyPI after sandbox is lifted
     system libexec/"bin/pip", "install", "--upgrade", "fwts==#{version}"
+    # Create symlinks to the installed binaries
+    bin.install_symlink libexec/"bin/fwts"
+    bin.install_symlink libexec/"bin/fb"
   end
 
   test do
