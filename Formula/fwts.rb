@@ -11,7 +11,8 @@ class Fwts < Formula
 
   def install
     venv = virtualenv_create(libexec, "python3.11")
-    venv.pip_install "fwts==#{version}"
+    # Install from PyPI to get all dependencies
+    system libexec/"bin/pip", "install", "fwts==#{version}"
     bin.install_symlink libexec/"bin/fwts"
     bin.install_symlink libexec/"bin/fb"
   end
