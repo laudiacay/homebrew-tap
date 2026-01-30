@@ -3,8 +3,8 @@ class Fwts < Formula
 
   desc "Git worktree workflow manager for feature development"
   homepage "https://github.com/laudiacay/featurebox"
-  url "https://files.pythonhosted.org/packages/6d/84/809fda21ecf498b86ee0d256b69e5d0d2148bf9b3a91cbf717cb99d1fcea/fwts-0.1.18.tar.gz"
-  sha256 "cd89691851454d9c8d0702d426af156a35e52d2b720e53e076403c8fbd341443"
+  url "https://files.pythonhosted.org/packages/f9/ac/bf76e8851ac71eb8d12321b4bac634be819e80e116445a53b83f36d18880/fwts-0.1.19.tar.gz"
+  sha256 "b5f24a412fdbbb09147e8e71ad78c36081fe72cedf36c1cb353444c968cb3065"
   license "MIT"
 
   depends_on "python@3.11"
